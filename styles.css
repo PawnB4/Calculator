@@ -25,18 +25,46 @@ body {
 }
 .display {
   background-color: #dffffa;
-  height: 150px;
+  height: 20%;
   border: 6px solid #5e60ce;
   border-radius: 10px;
   box-shadow: 1px 1px 1px;
 }
-.numbers {
+#text-current-operation {
+  text-align: right;
+  font-size: 20px;
+  padding: 0 10px;
+  height: 40%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#text-outcome {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 1000;
+  height: 60%;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mainButtons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
-  height: 100%;
+  height: 62%;
 }
-.numbers button {
+.mainButtons button {
   background-color: #5390d9;
   font-weight: 1000;
   font-size: 25px;
@@ -65,12 +93,14 @@ body {
 .buttons button:hover {
   background-color: #e373eb;
   transform: translateY(-2px);
+  cursor: pointer;
 }
-.numbers button:hover {
+.mainButtons button:hover {
   background-color: #77a3d8;
   transform: translateY(-2px);
+  cursor: pointer;
 }
-.numbers button:active,
+.mainButtons button:active,
 .buttons button:active {
   transform: translateY(2px);
   box-shadow: none;
